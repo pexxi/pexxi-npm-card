@@ -6,7 +6,7 @@
   "unpkg": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pexxi/pexxi.git"
+    "url": "https://github.com/pexxi/pexxi-npm-card.git"
   },
   "scripts": {
     "prepare": "node src/htmlify",
