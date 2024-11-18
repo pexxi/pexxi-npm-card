@@ -1,98 +1,86 @@
 {
-  "name": "pexxi",
-  "version": "1.0.0",
-  "description": "Personal npm card for Pekka Kokkonen (@pexxi)",
-  "main": "dist/card.js",
-  "unpkg": "index.html",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pexxi/pexxi-npm-card.git"
-  },
-  "scripts": {
-    "prepare": "node src/htmlify",
-    "prepublishOnly": "rm -rf dist && webpack"
-  },
-  "bin": {
-    "pexxi": "bin/index.js"
-  },
-  "files": [
-    "bin",
-    "dist",
-    "index.html"
-  ],
-  "keywords": [
-    "card",
-    "npm",
-    "npm card",
-    "npx",
-    "npx card",
-    "business card"
-  ],
-  "author": "Pekka Kokkonen",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "ansi-to-html": "^0.6.9",
-    "babel-loader": "^8.0.4",
-    "boxen": "^2.1.0",
-    "chalk": "^2.4.1",
-    "chalker": "^1.0.0",
-    "lodash.get": "^4.4.2",
-    "webpack": "^4.28.1",
-    "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.2"
-  },
-  "myCard": {
-    "info": {
-      "name": "Pekka Kokkonen",
-      "handle": "pexxi",
-      "twitter": "pekkakokkonen",
-      "npm": "pexxi",
-      "github": "pexxi",
-      "linkedin": "pekkakokkonen",
-      "web": "https://pexxi.dev",
-      "work": "Technical Lead @ <red>Vincit</>"
-    },
-    "data": [
-      "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
-      "",
-      {
-        "label": "<blue>Work</>",
-        "text": "{{work}}"
-      },
-      "",
-      {
-        "label": "Twitter",
-        "text": "https://twitter.com/<cyan>{{twitter}}</>",
-        "when": "{{twitter}}"
-      },
-      {
-        "label": "npm",
-        "text": "https://www.npmjs.com/<red>~{{npm}}</>",
-        "when": "{{npm}}"
-      },
-      {
-        "label": "GitHub",
-        "text": "https://github.com/<green>{{github}}</>",
-        "when": "{{github}}"
-      },
-      {
-        "label": "LinkedIn",
-        "text": "https://www.linkedin.com/in/<blue>{{linkedin}}</>",
-        "when": "{{linkedin}}"
-      },
-      {
-        "label": "Web",
-        "text": "<cyan>{{web}}</>",
-        "when": "{{web}}"
-      },
-      "",
-      {
-        "label": "Card",
-        "text": "<red>npx</> {{_packageName}}"
-      }
-    ]
-  }
+	"name": "pexxi",
+	"version": "1.2.0",
+	"description": "Personal npm card for Pekka Kokkonen (@pexxi)",
+	"main": "dist/card.js",
+	"unpkg": "index.html",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pexxi/pexxi-npm-card.git"
+	},
+	"scripts": {
+		"prepare": "node src/htmlify",
+		"prepublishOnly": "rm -rf dist && webpack"
+	},
+	"bin": {
+		"pexxi": "bin/index.js"
+	},
+	"files": ["bin", "dist", "index.html"],
+	"keywords": ["card", "npm", "npm card", "npx", "npx card", "business card"],
+	"author": "Pekka Kokkonen",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.3",
+		"ansi-to-html": "^0.6.9",
+		"babel-loader": "^8.0.4",
+		"boxen": "^2.1.0",
+		"chalk": "^2.4.1",
+		"chalker": "^1.0.0",
+		"lodash.get": "^4.4.2",
+		"webpack": "^4.28.1",
+		"webpack-bundle-analyzer": "^3.0.3",
+		"webpack-cli": "^3.1.2"
+	},
+	"myCard": {
+		"info": {
+			"name": "Pekka Kokkonen",
+			"handle": "pexxi",
+			"npm": "pexxi",
+			"github": "pexxi",
+			"linkedin": "pekkakokkonen",
+			"web": "https://pexxi.dev",
+			"work": "Technical Lead"
+		},
+		"data": [
+			"          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
+			"",
+			{
+				"label": "<blue>Work</>",
+				"text": "{{work}}"
+			},
+			"",
+			{
+				"label": "Twitter",
+				"text": "https://twitter.com/<cyan>{{twitter}}</>",
+				"when": "{{twitter}}"
+			},
+			{
+				"label": "npm",
+				"text": "https://www.npmjs.com/<red>~{{npm}}</>",
+				"when": "{{npm}}"
+			},
+			{
+				"label": "GitHub",
+				"text": "https://github.com/<green>{{github}}</>",
+				"when": "{{github}}"
+			},
+			{
+				"label": "LinkedIn",
+				"text": "https://www.linkedin.com/in/<blue>{{linkedin}}</>",
+				"when": "{{linkedin}}"
+			},
+			{
+				"label": "Web",
+				"text": "<cyan>{{web}}</>",
+				"when": "{{web}}"
+			},
+			"",
+			{
+				"label": "Card",
+				"text": "<red>npx</> {{_packageName}}"
+			}
+		]
+	}
 }
